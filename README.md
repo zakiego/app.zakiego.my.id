@@ -22,8 +22,9 @@ Response
     "username": "prasastipagi",
     "name": "Zaki",
     "tweet": 3187,
-    "followers": 663,
-    "following": 337
+    "followers": 662,
+    "following": 337,
+    "timestamp": "2021-12-23T05:17:23.320+00:00"
   }
 }
 ```
