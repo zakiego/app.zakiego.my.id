@@ -5176,6 +5176,7 @@ resolve@^2.0.0-next.3:
     react: latest
     react-dom: latest
     tailwindcss: latest
+    twitter-api-v2: ^1.8.0
     typescript: ^4.5.4
   languageName: unknown
   linkType: soft
@@ -5818,6 +5819,13 @@ resolve@^2.0.0-next.3:
   version: 0.0.6
   resolution: "tunnel@npm:0.0.6"
   checksum: c362948df9ad34b649b5585e54ce2838fa583aa3037091aaed66793c65b423a264e5229f0d7e9a95513a795ac2bd4cb72cda7e89a74313f182c1e9ae0b0994fa
+  languageName: node
+  linkType: hard
+
+"twitter-api-v2@npm:^1.8.0":
+  version: 1.8.0
+  resolution: "twitter-api-v2@npm:1.8.0"
+  checksum: 23e95cceff7e0b118a198c56797556af1419f8766400a64bee56dfa7e143ad3f8807456054f065bad37329fae5fb2cd16f6686c53d6edfa49686d4315c10177d
   languageName: node
   linkType: hard
 
