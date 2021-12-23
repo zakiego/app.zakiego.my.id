@@ -477,6 +477,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/luxon@npm:^2":
+  version: 2.0.8
+  resolution: "@types/luxon@npm:2.0.8"
+  checksum: 630d069a5a719c7512cb8805bcec6bac7f9aa5d434edf2159ba6dfb22eb8de982232a6d3621acd66f6ca2d1d6b0e8b40f9c8dafbbad654eb8cc01229f528ae45
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:*":
   version: 16.10.1
   resolution: "@types/node@npm:16.10.1"
@@ -3723,6 +3730,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"luxon@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "luxon@npm:2.2.0"
+  checksum: 69c715529b6aaa1f96fad8edfe2681004a1f314191ac243804a90c023fc533b5e3f0b9d34d5c86555d2a41297ddbee96a67a7cbb185f20243e66b7c6d4b809ac
+  languageName: node
+  linkType: hard
+
 "make-dir@npm:^3.0.2":
   version: 3.1.0
   resolution: "make-dir@npm:3.1.0"
@@ -5159,6 +5173,7 @@ resolve@^2.0.0-next.3:
   dependencies:
     "@next/eslint-plugin-next": ^12.0.7
     "@types/eslint": ^8
+    "@types/luxon": ^2
     "@types/node": ^17.0.2
     "@types/react": ^17.0.37
     "@typescript-eslint/eslint-plugin": ^5.8.0
@@ -5170,6 +5185,7 @@ resolve@^2.0.0-next.3:
     eslint-config-prettier: ^8.3.0
     eslint-plugin-prettier: ^4.0.0
     eslint-plugin-simple-import-sort: ^7.0.0
+    luxon: ^2.2.0
     next: ^12.0.7
     postcss: ^8.4.5
     prettier: ^2.5.1
