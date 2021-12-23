@@ -1,3 +1,4 @@
+import { DateTime } from "luxon";
 import type { NextApiRequest, NextApiResponse } from "next";
 import TwitterApi from "twitter-api-v2";
 
@@ -47,7 +48,9 @@ export default async function PublicTwitter(
     tweet_count: tweet,
   } = <PublcMetrics>data.public_metrics;
 
-  const resp = { id, username, name, tweet, followers, following };
+  const timestamp = DateTime.now().toISO();
+
+  const resp = { id, username, name, tweet, followers, following, timestamp };
 
   res.status(200).json({ error: false, data: resp });
 }
