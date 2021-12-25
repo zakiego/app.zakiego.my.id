@@ -484,6 +484,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/moment-hijri@npm:^2":
+  version: 2.1.0
+  resolution: "@types/moment-hijri@npm:2.1.0"
+  dependencies:
+    moment: ">=2.14.0"
+  checksum: 5f4abaf24729d887896f0c6aa11452dd4ac23fe09401a7e4259b393727936e05ac9bfdcd82d7d71be5894218486efad25333b1ac7fc1e66a640c29c202e34126
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:*":
   version: 16.10.1
   resolution: "@types/node@npm:16.10.1"
@@ -3951,6 +3960,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"moment-hijri@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "moment-hijri@npm:2.1.2"
+  dependencies:
+    moment: ^2.24.0
+  checksum: 63a2c0f4db8691ae2ad3b1e2e3a7a42d8841339a35cfa337eb22ccd093f55f437c8a12e7b9ff45728d75326624158e3b0a3e9a297d70024391179eafec5757c6
+  languageName: node
+  linkType: hard
+
+"moment@npm:>=2.14.0, moment@npm:^2.24.0":
+  version: 2.29.1
+  resolution: "moment@npm:2.29.1"
+  checksum: 1e14d5f422a2687996be11dd2d50c8de3bd577c4a4ca79ba5d02c397242a933e5b941655de6c8cb90ac18f01cc4127e55b4a12ae3c527a6c0a274e455979345e
+  languageName: node
+  linkType: hard
+
 "ms@npm:2.0.0":
   version: 2.0.0
   resolution: "ms@npm:2.0.0"
@@ -5174,6 +5199,7 @@ resolve@^2.0.0-next.3:
     "@next/eslint-plugin-next": ^12.0.7
     "@types/eslint": ^8
     "@types/luxon": ^2
+    "@types/moment-hijri": ^2
     "@types/node": ^17.0.2
     "@types/react": ^17.0.37
     "@typescript-eslint/eslint-plugin": ^5.8.0
@@ -5186,6 +5212,7 @@ resolve@^2.0.0-next.3:
     eslint-plugin-prettier: ^4.0.0
     eslint-plugin-simple-import-sort: ^7.0.0
     luxon: ^2.2.0
+    moment-hijri: ^2.1.2
     next: ^12.0.7
     postcss: ^8.4.5
     prettier: ^2.5.1
