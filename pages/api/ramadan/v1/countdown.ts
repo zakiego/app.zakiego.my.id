@@ -7,10 +7,22 @@ export default async function CountRamadan(
 ) {
   try {
     moment.locale("en");
-    const now = moment();
 
+    // create time by utc
+    const utc = parseFloat(<string>req.query.utc) || 0;
+    const dateUtc: string = moment().utcOffset(utc).format("YYYY/M/D HH:mm:ss");
+
+    // conver dateUtc string to date
+    const now = moment(dateUtc, "YYYY/M/D HH:mm:ss");
+
+    // check if ramadan this year has passed or not
+    // because if passed, the next ramadan is next year
     const isPassedRamadanThisYear = parseInt(now.format("iM")) > 9;
+
+    // check is ramadan now
     const isRamadanNow = parseInt(now.format("iM")) == 9;
+
+    // check hijri year today
     const yearHijriNow = parseInt(now.format("iYYYY"));
 
     if (isRamadanNow) {
@@ -21,7 +33,8 @@ export default async function CountRamadan(
       return res.status(200).json({
         error: false,
         data: {
-          today: now.format("YYYY/M/D"),
+          utc,
+          today: now.format("YYYY/M/D HH:mm:ss"),
           nextRamadan: whenNextRamadan.format("YYYY/M/D"),
           countdown: 0,
           isRamadanNow,
@@ -38,12 +51,13 @@ export default async function CountRamadan(
       return res.status(200).json({
         error: false,
         data: {
-          today: now.format("YYYY/M/D"),
+          utc,
+          today: now.format("YYYY/M/D HH:mm:ss"),
           nextRamadan: whenNextRamadan.format("YYYY/M/D"),
           countdown,
           isRamadanNow,
           ramadanDay: 0,
-          ramadanProgress: 0,
+          ramadanProgress: "0%",
         },
       });
     }
@@ -55,12 +69,13 @@ export default async function CountRamadan(
       return res.status(200).json({
         error: false,
         data: {
-          today: now.format("YYYY/M/D"),
+          utc,
+          today: now.format("YYYY/M/D HH:mm:ss"),
           nextRamadan: whenNextRamadan.format("YYYY/M/D"),
           countdown,
           isRamadanNow,
           ramadanDay: 0,
-          ramadanProgress: 0,
+          ramadanProgress: "0%",
         },
       });
     }
