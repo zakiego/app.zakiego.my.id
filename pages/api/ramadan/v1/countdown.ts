@@ -1,7 +1,7 @@
 import moment from "moment-hijri";
 import type { NextApiRequest, NextApiResponse } from "next";
 
-export default async function CountRamadan(
+export default async function CountDownRamadan(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
