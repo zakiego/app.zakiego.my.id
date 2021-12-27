@@ -12,11 +12,15 @@ Parameter
 | :--------- | :------- | :----------------------------- |
 | `username` | `string` | **Required**. Twitter username |
 
+Example
+
+```
+https://app.zakiego.my.id/api/twitter/v1/public?username=prasastipagi
+```
+
 Response
 
 ```json
-GET /api/twitter/v1/public?username=prasastipagi
-
 {
   "error": false,
   "data": {
@@ -43,11 +47,15 @@ Parameter
 | :---- | :------ | :----------------------------------------- |
 | `utc` | `float` | **Optional**. Default value is 0. UTC time |
 
+Example
+
+```
+https://app.zakiego.my.id/api/ramadan/v1/countdown?utc=8
+```
+
 Response
 
 ```json
-GET /api/ramadan/v1/countdown?utc=8
-
   "error": false,
   "data": {
     "utc": 8,
