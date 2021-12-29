@@ -56,14 +56,17 @@ https://app.zakiego.my.id/api/ramadan/v1/countdown?utc=8
 Response
 
 ```json
+{
   "error": false,
   "data": {
     "utc": 8,
-    "today": "2021/12/27 06:44:01",
+    "today": "2021/12/29 09:48:21",
     "nextRamadan": "2022/4/2",
-    "countdown": 96,
+    "nextRamadanHijri": "1443/9/1",
+    "countdown": 94,
     "isRamadanNow": false,
     "ramadanDay": 0,
     "ramadanProgress": "0%"
   }
+}
 ```
