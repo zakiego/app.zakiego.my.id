@@ -35,7 +35,7 @@ Response
 }
 ```
 
-## Countdown Ramadan
+## Ramadan Countdown
 
 ```http
 GET /api/ramadan/v1/countdown?utc={utc}
