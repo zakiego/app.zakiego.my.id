@@ -20,7 +20,9 @@ export default async function CountDownRamadan(
     const isPassedRamadanThisYear = parseInt(now.format("iM")) > 9;
 
     // check is ramadan now
-    const isRamadanNow = parseInt(now.subtract(1, "days").format("iM")) == 9;
+    const copyNowToSubtractDay = moment(now);
+    const isRamadanNow =
+      parseInt(copyNowToSubtractDay.subtract(1, "days").format("iM")) == 9;
 
     // check hijri year today
     const yearHijriNow = parseInt(now.format("iYYYY"));
