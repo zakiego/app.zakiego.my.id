@@ -21,18 +21,14 @@ export default async function CountDownRamadan(
 
     // check is ramadan now
     const copyNowToSubtractDay = moment(now);
-    const isRamadanNow =
-      parseInt(copyNowToSubtractDay.subtract(1, "days").format("iM")) == 9;
+    const isRamadanNow = parseInt(copyNowToSubtractDay.format("iM")) == 9;
 
     // check hijri year today
     const yearHijriNow = parseInt(now.format("iYYYY"));
 
     if (isRamadanNow) {
-      const whenNextRamadan = moment(`${yearHijriNow}/9/1`, "iYYYY/iM/iD").add(
-        1,
-        "days",
-      );
-      const ramadanDay = parseInt(now.subtract(1, "days").format("iD"));
+      const whenNextRamadan = moment(`${yearHijriNow}/9/1`, "iYYYY/iM/iD");
+      const ramadanDay = parseInt(now.format("iD"));
       const ramadanProgress = ((ramadanDay / 30) * 100).toFixed(0) + "%";
 
       return res.status(200).json({
@@ -51,10 +47,7 @@ export default async function CountDownRamadan(
     }
 
     if (!isPassedRamadanThisYear) {
-      const whenNextRamadan = moment(`${yearHijriNow}/9/1`, "iYYYY/iM/iD").add(
-        1,
-        "days",
-      );
+      const whenNextRamadan = moment(`${yearHijriNow}/9/1`, "iYYYY/iM/iD");
       const countdown = whenNextRamadan.diff(now, "days") + 1;
 
       return res.status(200).json({
@@ -73,10 +66,7 @@ export default async function CountDownRamadan(
     }
 
     if (isPassedRamadanThisYear) {
-      const whenNextRamadan = moment(
-        `${yearHijriNow + 1}/9/1`,
-        "iYYYY/iM/iD",
-      ).add(1, "days");
+      const whenNextRamadan = moment(`${yearHijriNow + 1}/9/1`, "iYYYY/iM/iD");
       const countdown = whenNextRamadan.diff(now, "days") + 1;
 
       return res.status(200).json({
